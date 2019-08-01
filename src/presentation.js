@@ -6,6 +6,7 @@ import {
   Cite,
   Deck,
   Heading,
+  Image,
   List,
   ListItem,
   Quote,
@@ -14,6 +15,7 @@ import {
 } from 'spectacle'
 // Import theme
 import createTheme from 'spectacle/lib/themes/default'
+import sponsors from './sponsors.jpg'
 
 // Require CSS
 require('normalize.css')
@@ -39,6 +41,18 @@ export default class Presentation extends React.Component {
         transitionDuration={500}
         theme={theme}
       >
+        <Slide
+          transition={['zoom']}
+          bgColor="primary"
+          style={{ maxHeight: '100vh', maxWidth: '100vw' }}
+        >
+          <Image
+            src={sponsors}
+            width="100%"
+            height="auto"
+            style={{ maxHeight: '100vh', maxWidth: '100vw' }}
+          />
+        </Slide>
         <Slide transition={['zoom']} bgColor="primary">
           <Heading size={4} caps lineHeight={1} textColor="secondary">
             Building a Mentoring Community Through Live Coding
